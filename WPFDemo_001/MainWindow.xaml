@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFDemo_001"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Anasayfa" Height="275" Width="600" Loaded="Window_Loaded">
     <Grid>
-        
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="117,44,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="149"/>
+        <Label Content="Adı" HorizontalAlignment="Left" Margin="53,41,0,0" VerticalAlignment="Top"/>
+        <Label Content="Soyadı" HorizontalAlignment="Left" Margin="53,72,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt1" HorizontalAlignment="Left" Height="23" Margin="117,44,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="149"/>
+        <TextBox x:Name="txt2" HorizontalAlignment="Left" Height="23" Margin="117,72,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="149"/>
+        <DataGrid AutoGenerateColumns="False" x:Name="dt1" HorizontalAlignment="Left" Height="191" Margin="271,41,0,0" VerticalAlignment="Top" Width="311">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding TCKN}" Header="Tc Kimlik"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Adi}" Header="Personel Adı"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Soyadi}" Header="Personel Soyadı"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Kaydet" HorizontalAlignment="Left" Margin="190,138,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" />
+        <Label x:Name="hata" Content="" HorizontalAlignment="Left" Margin="52,13,0,0" VerticalAlignment="Top"/>
+        <Button Content="Sil" HorizontalAlignment="Left" Margin="190,164,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="Güncelle" HorizontalAlignment="Left" Margin="190,188,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+        <Label Content="TCKN" HorizontalAlignment="Left" Margin="57,98,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.436,0.192"/>
+        <TextBox x:Name="txt3" HorizontalAlignment="Left" Height="23" Margin="117,101,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="149"/>
+
     </Grid>
 </Window>
